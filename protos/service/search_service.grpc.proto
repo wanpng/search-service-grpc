@@ -12,15 +12,15 @@ service SearchService {
 message SearchJobAlertRequest {
     string search = 1;
     string filter = 2;
-    string page = 3;
-    string count = 4;
+    int32 page = 3;
+    int32 count = 4;
     string order_by = 5;
     string job_seeker_id = 6;
 }
 
 message SearchJobAlertResponse {
      // @inject_tag: json:"@odata.count";"
-    string count = 1;
+    int32 count = 1;
      // @inject_tag: json:"value";"
     repeated SearchJobAlert value = 2;
 }
