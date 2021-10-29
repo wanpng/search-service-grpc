@@ -19,22 +19,34 @@ message SearchJobAlertRequest {
 }
 
 message SearchJobAlertResponse {
+     // @inject_tag: json:"@odata.count";"
     string count = 1;
-    repeated SearchJobAlert values = 2;
+     // @inject_tag: json:"value";"
+    repeated SearchJobAlert value = 2;
 }
 
 message SearchJobAlert {
+     // @inject_tag: json:"id";"
     string id = 1;
+     // @inject_tag: json:"job_title";"
     string job_title = 2;
+     // @inject_tag: json:"province";"
     string province =3;
+     // @inject_tag: json:"career_level";"
     string career_level = 4;
+     // @inject_tag: json:"employment_type";"
     string employment_type = 5;
+     // @inject_tag: json:"job_classification";"
     string job_classification = 6;
+     // @inject_tag: json:"company";"
     SearchJobEmployer company = 7;
 }
 
 message SearchJobEmployer {
+     // @inject_tag: json:"employer_id";"
     string employer_id = 1;
+     // @inject_tag: json:"employer_name";"
     string employer_name = 2;
+     // @inject_tag: json:"employer_photo_url";"
     string employer_photo_url = 3;
 }
