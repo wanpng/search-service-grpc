@@ -1,5 +1,6 @@
-# protoc --go_out=$GOPATH/src protos/domain/*.proto
+SRC_DIR=$(pwd)
+DST_DIR=$(pwd)
 
-protoc --go_out=$GOPATH/src protos/service/*.proto
+echo "OS:" $OSTYPE "[compiling protocol buffers]"
 
-protoc --go-grpc_out=$GOPATH/src protos/service/*.proto
+protoc -I=$SRC_DIR --go_out=$GOPATH/src $SRC_DIR/protos/service/*.proto
