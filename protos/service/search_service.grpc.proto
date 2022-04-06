@@ -49,4 +49,6 @@ message SearchJobEmployer {
     string employer_name = 2;
      // @inject_tag: json:"employer_photo_url";"
     string employer_photo_url = 3;
+    // @inject_tag: json:"employer_is_lanco";"
+    bool employer_is_lanco = 4;
 }
